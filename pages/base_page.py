@@ -105,6 +105,12 @@ class BasePage:
             return text
         return None
 
+    @allure.step('Навести курсор на элемент')
+    def move_to_element(self, locator):
+        element = self.find_visible_element(locator)
+        if element:
+            ActionChains(self.driver).move_to_element(element).perform()
+
     @allure.step('Прикрепить файл')
     def attach_file(self, locator, path):
         element = self.find_invisible_element(locator)

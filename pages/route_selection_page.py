@@ -10,7 +10,7 @@ class RouteSelectionPage(BasePage):
     def is_results_equal(self, expected_results_text, expected_results_duration):
         conditions = [
             self.get_text_from_element(RouteSelectionPageLocators.DIV_RESULTS_TEXT) == expected_results_text,
-            self.get_text_from_element(RouteSelectionPageLocators.DIV_RESULTS_DURATION) == expected_results_duration,
+            self.get_text_from_element(RouteSelectionPageLocators.DIV_RESULTS_DURATION) == expected_results_duration
         ]
         return all(conditions)
     
@@ -68,6 +68,10 @@ class RouteSelectionPage(BasePage):
             self.find_visible_element(RouteSelectionPageLocators.BUTTON_ORDER_TAXI)
         ]
         return all(conditions)
+    
+    @allure.step('Начать оформлять заказ такси')
+    def start_ordering_taxi(self):
+        self.click_to_element(RouteSelectionPageLocators.BUTTON_ORDER_TAXI)
     
     @allure.step('Проверить, что появилась кнопка Забронировать')
     def is_book_button_active(self):
