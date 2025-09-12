@@ -6,6 +6,7 @@
 - Selenium WebDriver
 - Pytest
 - Allure Framework
+- Github Actions для создания отчета Allure и публикации в Github Pages (https://aleksandrgolovin.github.io/Sprint_10_1/)
 
 ## Структура тестов
 
@@ -74,6 +75,7 @@ pytest --alluredir=allure-results
 ```bash
 allure serve allure-results
 ```
+Ссылка на очет: https://aleksandrgolovin.github.io/Sprint_10_1/
 
 ## Локаторы
 Локаторы элементов вынесены в отдельные файлы в папке `locators`:
