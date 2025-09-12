@@ -1,6 +1,5 @@
 import allure
 from pages.base_page import BasePage
-from locators.general_locators import GeneralLocators
 from locators.order_taxi_page_locators import OrderTaxiPageLocators
 from data import TARIFFS, AWAITING_BLOCK_TITLE, ADDRESS_FROM, ADDRESS_TO, DETAILS_BLOCK_INFORMATION_COST
 

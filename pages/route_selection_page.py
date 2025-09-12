@@ -1,6 +1,5 @@
 import allure
 from pages.base_page import BasePage
-from locators.general_locators import GeneralLocators
 from locators.route_selection_page_locators import RouteSelectionPageLocators
 
 
