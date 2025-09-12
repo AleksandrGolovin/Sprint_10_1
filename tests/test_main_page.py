@@ -15,7 +15,7 @@ class TestMainPage:
             (ADDRESS_TO, ADDRESS_FROM),
         ]
     )
-    def test_main_page_from_to_route_show_success(self, address_from, address_to, driver):
+    def test_main_page_input_from_to_route_show_success(self, address_from, address_to, driver):
         main_page = MainPage(driver)
         
         main_page.enter_route_addresses(address_from, address_to)
