@@ -8,7 +8,7 @@ from pages.main_page import MainPage
 class TestMainPage:
     
     @allure.title('Проверка отображения точек маршрута на карте при вводе адресов ОТКУДА и КУДА')
-    @allure.description('Открыть главную страницу, ввести адреса ОТКУДА и КУДА, проверить, что появились точки на карте')
+    @allure.description('При вводе двух разных предустановленных адресов в поля "Откуда" и "Куда" на карте отображаются две точки начала и конца маршрута')
     @pytest.mark.parametrize('address_from, address_to', 
         [
             (ADDRESS_FROM, ADDRESS_TO),

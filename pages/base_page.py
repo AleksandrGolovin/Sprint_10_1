@@ -53,7 +53,16 @@ class BasePage:
         except:
             return None
     
-    @allure.step('Ожидать отображения элемента')
+    @allure.step(title='Ожидать отображения элемента не менее N секунд')
+    def awaiting_for_visibility_by_time(self, seconds: int, locator):
+        """Ожидание отображение элемента не менее N секунд"""
+        return WebDriverWait(self.driver, self.timeout + seconds).until(ec.visibility_of_element_located(locator))
+    
+    @allure.step('Ожидать, когда текст сменится с дефолтного')
+    def awaiting_for_text_changing(self, locator, default_text):
+        self.wait.until_not(lambda d: self.get_text_from_element(locator) == default_text)
+    
+    @allure.step(title='Ожидать отображения элемента')
     def wait_for_visibility(self, locator):
         """Ожидание отображение элемента"""
         return self.wait.until(ec.visibility_of_element_located(locator))
